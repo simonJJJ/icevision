@@ -9,10 +9,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Switched from poetry to setuptools**
 
 ### Added
+- Template code for `parsers.SizeMixin` if `parsers.FilepathMixin` is used
+- Get image size without opening image with `get_image_size`
+- Ability to skip record while parsing with `AbortParseRecord`
+- Autofix for record
+- Record class and mixins
 - InvalidDataError for BBox
 - Catches InvalidDataError while parsing data
 
 ### Changed
+- **Breaking:** Unified `parsers.SizeMixin` functions `image_width` and `image_height` into a single function `image_width_height`
 - Rename Parser `SizeMixin` fields from `width` `height` to `image_width` `image_height`
 
 ### Deleted
